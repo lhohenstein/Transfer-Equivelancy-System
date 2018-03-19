@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Transfer Tables </title>
+<stlye type = "text/css">
+table {
+border: 2px solid red;
+background-color: #FFC;
+}
+th {
+border-bottom: 5px solid #000;
+}
+td {
+border-bottom: 2px solid #666;
+}
+</style>
+</head>
+<body>
+
+<h1>Display Transfer Tables</h1>
+
+<?php
+
+include('connect-mysql.php');
+
+$sqlget = "SELECT * FROM 'table 1'";
+$sqldata = mysqli_query($dbcon, $sqlget) or die('error');
+
+echo "<table>";
+echo "<tr><th>SchoolName</th><th>TransCourseCode</th><th>TransCourseName</th><th>ArcadiaCourseCode</th></tr>;
+
+while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
+echo "<tr><td>";
+echo $row['COL 1'];
+echo "</td><td>";
+echo $row['COL 2'];
+echo "</td><td>";
+echo $row['COL 3']
+echo "</td><td>";
+echo $row['COL 4'];
+echo "</td></tr>";
+
+}
+
+echo "</table>";
+
+?>
+
+
+</body>
+</html>
