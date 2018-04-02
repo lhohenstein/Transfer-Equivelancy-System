@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <title> Table with Database>
-   </head>
+
    <body>
    <table> 
      <tr>
@@ -18,19 +16,20 @@
      </tr>
 
     <table>
-     	<?php>
-     	$conn = mysqli_connect("localhost", "root","", "csv_db");
+     	<?php
+     	$conn = mysqli_connect("localhost", "root","", "SchoolData");
      	if ($conn-> connect_error){
      	  die("Connection failed:". $conn-> connect_error);
      }
-     $sql = "SELECT * table_name";
-     $result = $conn-> query($sql);
-
-     if ($result-> num_rows > 0){
-       while ($row = $result-> fetch_assoc()){
+     $sql = "SELECT * FROM test";
+     $result = $conn-> query($sql)or die($conn->error);
+        echo "number of rows: " . $result->num_rows;
+  if ($result-> num_rows >= 0){
+    while ($row = $result-> fetch_assoc()){
           echo "<tr><td>". $row["Transfer_School_Code"] ."</td><td>".  $row["Transfer_School_Name"]."</td><td>".  $row["Transfer_School_Course_Code"]. "</td><td>".  $row["Transfer_Course_Name"]. "</td><td>".  $row["Arcadia_Course_Code"]. "</td><td>".  $row["Arcadia_Course_Name"]. "</td><td>".  $row["General_Education"]. "</td><td>".  $row["Minimum_Undergraduate_Transfer_Grade"]. "</td><td>".  $row["Core_To_Core_Agreement"].
-   }
-   echo "</table>";
+      
+            "</table>";
+    }
  }
  else{
  	echo "0 result";
