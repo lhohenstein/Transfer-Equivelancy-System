@@ -12,13 +12,13 @@
   	$res_u = mysqli_query($db, $sql_u);
   	$res_e = mysqli_query($db, $sql_e);
 
-  	if (mysqli_num_rows($res_u) > 0) {
-  	  $school_error = 'School is in database'; 	
-  	}if(mysqli_num_rows($res_e) > 0){
-  	  $code_error = 'course is in database';
+  	if (mysqli_num_rows($res_u) < 1) {
+  	  $school_error = 'School is not in database - Please Contact the Registrar Office'; 	
+  	}else if(mysqli_num_rows($res_e) < 1){
+  	  $code_error = 'course is not in database - Please contact the Registrar Office';
       }else{
            
-           echo 'Saved!';
+           echo 'entry is in database';
            exit(); 	
          }
   	
