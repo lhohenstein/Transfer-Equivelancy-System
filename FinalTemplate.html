@@ -1,0 +1,193 @@
+<html>
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" media="screen" href="Transfer_Layout.css">
+</head>
+   <body>
+  
+      <h1> Transfer Equivalency Form</h1>
+<div align="center">
+</body>
+
+<body>
+<script>
+
+
+
+/*
+Verify the input grade is above accepted threshhold before totaling valid credits
+*/
+function adder() {
+if(  document.getElementById("myform").elements["grade1"].value == "A" || document.getElementById("myform").elements["grade1"].value == "B" || document.getElementById("myform").elements["grade1"].value == "C"){
+var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
+} 
+else{
+var num1 = 0;
+}
+if(  document.getElementById("myform").elements["grade2"].value == "A" || document.getElementById("myform").elements["grade2"].value == "B" || document.getElementById("myform").elements["grade2"].value == "C"){
+  var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
+  }
+  else{
+  	num2 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade3"].value == "A" || document.getElementById("myform").elements["grade3"].value == "B" || document.getElementById("myform").elements["grade3"].value == "C"){
+  var num3 = parseInt(document.getElementById("myform").elements["num3"].value);
+  }
+  else{
+  	num3 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade4"].value == "A" || document.getElementById("myform").elements["grade4"].value == "B" || document.getElementById("myform").elements["grade4"].value == "C"){
+  var num4 = parseInt(document.getElementById("myform").elements["num4"].value);
+  }
+  else{
+  	num4 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade5"].value == "A" || document.getElementById("myform").elements["grade5"].value == "B" || document.getElementById("myform").elements["grade5"].value == "C"){
+  var num5 = parseInt(document.getElementById("myform").elements["num5"].value);
+  }
+  else{
+  	num5 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade6"].value == "A" || document.getElementById("myform").elements["grade6"].value == "B" || document.getElementById("myform").elements["grade6"].value == "C"){
+  var num6 = parseInt(document.getElementById("myform").elements["num6"].value);
+  }
+  else{
+  	num6 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade7"].value == "A" || document.getElementById("myform").elements["grade7"].value == "B" || document.getElementById("myform").elements["grade7"].value == "C"){
+  var num7 = parseInt(document.getElementById("myform").elements["num7"].value);
+  }
+  else{
+  	num7 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade8"].value == "A" || document.getElementById("myform").elements["grade8"].value == "B" || document.getElementById("myform").elements["grade8"].value == "C"){
+  var num8 = parseInt(document.getElementById("myform").elements["num8"].value);
+  }
+  else{
+  	num8 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade9"].value == "A" || document.getElementById("myform").elements["grade9"].value == "B" || document.getElementById("myform").elements["grade9"].value == "C"){
+  var num9 = parseInt(document.getElementById("myform").elements["num9"].value);
+  }
+  else{
+  	num9 = 0;
+  }
+  if(  document.getElementById("myform").elements["grade10"].value == "A" || document.getElementById("myform").elements["grade10"].value == "B" || document.getElementById("myform").elements["grade10"].value == "C"){
+  var num10 = parseInt(document.getElementById("myform").elements["num10"].value);
+  }
+  else{
+  	num10 = 0;
+  }
+
+
+  var total = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10;
+  document.getElementById("p1").innerHTML = "Total Credits: " + total;
+  
+}
+</script>
+
+<form id="myform">
+
+Course Code: <input type="text" name = "cc1"> Grade: <select id="grade1" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+		
+	</select>
+
+Credits: <input type="number" name="num1"><br /><br /> 
+
+Course Code: <input type="text" name="cc2"> Grade: <select id="grade2" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+	</select>
+Credits: <input type="number" name="num2"><br /><br />
+
+Course Code: <input type="text" name = "cc3"> Grade: <select id="grade3" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+		
+	</select>
+Credits: <input type="number" name="num3"><br /><br />
+
+Course Code: <input type="text" name="cc4"> Grade: <select id="grade4" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+	</select>
+		Credits: <input type="number" name="num4"><br /><br />
+
+		Course Code: <input type="text" name = "cc5"> Grade: <select id="grade5" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+		
+	</select>
+Credits: <input type="number" name="num5"><br /><br /> 
+
+Course Code: <input type="text" name="cc6"> Grade: <select id="grade6" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+	</select>
+		Credits: <input type="number" name="num6"><br /><br />
+
+		Course Code: <input type="text" name = "cc7"> Grade: <select id="grade7" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+		
+	</select>
+Credits: <input type="number" name="num7"><br /><br />
+
+Course Code: <input type="text" name="cc8"> Grade: <select id="grade8" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+	</select>
+		Credits: <input type="number" name="num8"><br /><br />
+
+		Course Code: <input type="text" name = "cc9"> Grade: <select id="grade9" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+		
+	</select>
+Credits: <input type="number" name="num9"><br /><br /> 
+
+Course Code: <input type="text" name="cc10"> Grade: <select id="grade10" >	<option value = "Grade...">Grade...</option>
+		<option value = "A">A</option>
+		<option value = "B">B</option>
+		<option value = "C">C</option>
+		<option value = "D">D</option>
+		<option value = "E">E</option>
+	</select>
+		Credits: <input type="number" name="num10"><br /><br />
+</form>
+
+
+<button onclick="adder()"> Submit</button><br><br>
+<p id="p1">Total Credits:</p>
+  
+  </body>
+</html>
