@@ -19,6 +19,11 @@
       }else{
            
            echo 'entry is in database';
+        while($row = $res_u->fetch_row()){
+printf("%s ($s)\n", $row[0]);
+}
+      
+      
            exit(); 	
          }
   	
