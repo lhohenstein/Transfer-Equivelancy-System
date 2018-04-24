@@ -1,0 +1,37 @@
+<?php 
+  $db = mysqli_connect('localhost', 'root', '', 'csv_db');
+  $schoolname = "";
+  $coursecode = "";
+  $grade="";
+  if (isset($_POST['register'])) {
+  	$schoolname = $_POST['schoolname'];
+  	$coursecode = $_POST['coursecode'];
+  	$credit = $_POST['credits'];
+    $grade= $_POST['grade'];
+
+  	$sql_u = "SELECT TRANSFER_SCHOOL_NAME FROM tbl_name WHERE TRANSFER_SCHOOL_NAME='$schoolname'";
+  	$sql_e = "SELECT TRANSFER_SCHOOL_COURSE_CODE FROM tbl_name WHERE  TRANSFER_SCHOOL_COURSE_CODE = '$coursecode'" ;
+    $sql_g = "SELECT MINIMUM_UNDERGRADUATE_TRANSFER_GRADE FROM tbl_name WHERE  TRANSFER_SCHOOL_COURSE_CODE = '$coursecode' AND TRANSFER_SCHOOL_NAME='$schoolname' ";
+  	$res_u = mysqli_query($db, $sql_u);
+  	$res_e = mysqli_query($db, $sql_e);
+    $res_g = mysqli_query($db, $sql_g);
+    while ( $row=mysqli_fetch_row($res_g))
+    {
+    $ARgrade =$row[0];
+  }
+
+  	if (mysqli_num_rows($res_u) <1) {
+  	  $school_error = 'School is not in database - Please Contact the Registrar Office'; 	
+  	}else if(mysqli_num_rows($res_e) <1){
+  	  $code_error = 'course is not in database - Please contact the Registrar Office';
+      }
+      else if (strcmp($grade , $ARgrade) <0)
+      {
+        $grade_error = "YOu do not have a high enough grade  '$ARgrade'";
+      }
+        else{
+           
+           echo "you will receive ' $credit' credits";
+           exit(); 	
+         }
+      }
