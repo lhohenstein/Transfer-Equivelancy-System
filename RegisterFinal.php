@@ -66,6 +66,10 @@
     </div>
   </form>
   </body>
+       <ul>
+        <li><a href="SchoolList.php">List of School Names</a></li>
+        
+      </ul>
   <footer>
   <p>For any additional questions, or to report missing course information, please contact the Registrar's office <br>
     Taylor Hall, Room 103 <br>
