@@ -40,6 +40,7 @@ while ( $row=mysqli_fetch_row($res_g))
     {
     $genEd =$row[0];
   }
+  echo "________________ COURSE 1 ________________";
 //echo strcmp($grade, $ARgrade) ;
   	if (mysqli_num_rows($res_u) <1) {
   	  $school_error = 'School is not in database - Please Contact the Registrar Office';
@@ -47,6 +48,7 @@ while ( $row=mysqli_fetch_row($res_g))
   	}
   	else if(mysqli_num_rows($res_e) <1){
   	  $code_error = 'course is not in database - Please contact the Registrar Office';
+      echo "$code_error";
       }
      else if (strcmp($grade , $ARgrade) == '<1')
       {
@@ -56,7 +58,7 @@ while ( $row=mysqli_fetch_row($res_g))
       else{
            $creditTotal+=$credit;
            //echo " You will receive $credit credits";
-           echo "________________ CLASS 1 ________________";
+           
            echo "<br>";
            echo " Arcadia course code: $AuCc";
             echo "<br>";
@@ -95,6 +97,7 @@ while ( $row1=mysqli_fetch_row($res_g1))
     {
     $genEd1 =$row1[0];
   }
+  echo "________________ COURSE 2 ________________";
 // echo strcmp($grade1, $ARgrade1) ;
   	if (mysqli_num_rows($res_u1) <1) {
   	  $school_error1 = 'School is not in database - Please Contact the Registrar Office';
@@ -102,17 +105,17 @@ while ( $row1=mysqli_fetch_row($res_g1))
   	}
   	else if(mysqli_num_rows($res_e1) <1){
   	  $code_error1 = 'course is not in database - Please contact the Registrar Office';
-      echo "course is not in database - Please contact the Registrar Office";
+      echo "Course is not in database - Please contact the Registrar Office";
       }
      else if (strcmp($grade1 , $ARgrade1) == 1)
       {
-        $grade_error1 = "YOu do not have a high enough grade  '$ARgrade1'";
+        $grade_error1 = "Yu do not have a high enough grade  '$ARgrade1'";
         echo "Grade is not accepted.";
       }
       else{
            $creditTotal+=$credit1;
            //echo " You will receive $credit1 credits";
-           echo "________________ CLASS 2 ________________";
+           
            echo "<br>";
            echo "<br>";
            echo " Arcadia course code: $AuCc1";
